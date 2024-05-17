@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet"   href="{% static 'css/bootstrap.min.css' %}">
+    
+</head>
+<body>
+   <div class="container ">
+<div class="row">
+    <h1 style="background-color: pink; color:blue;" class="m-5 p-4 text-center"> Student management System</h1>
+      
+     <div class="col-sm-6">
+
+        <h2 style="background-color: skyblue; color: black;" class="m-5 p-3 text-center"> Update Student Information </h2>
+        <form class="border rounded p-4 m-5" method="post">
+            {% csrf_token %}
+          {{form.as_p}}
+                              
+       <button type="submit" class="btn btn-success btn-lg">Update</button>
+       <a href="{% url 'home' %}" class="btn btn-info btn-lg">Back </a>
+        </form>
+
+
+
+
+
+</div>
+
+</div>
+ </div>
+
+
+
+   <script src="{% static 'crud/static/css/js/code.jquery.js'%}"></script>
+   <script src="{% static 'crud/static/css/js/bootstrap.min.js'%}"></script>
+  </body>
+</html>
